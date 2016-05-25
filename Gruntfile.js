@@ -13,8 +13,26 @@ module.exports = function(grunt) {
 		copy: {
 			main: {
 				files: [
-					// includes files within path
-					{expand: true, src: ['fonts/*'], dest: 'build/fonts', filter: 'isFile'},
+					{
+						expand: true,
+						src: ['fonts/*'],
+						dest: 'build/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						cwd: 'sass/vendor/',
+						src: ['**'],
+						dest: 'build/css/vendor/',
+						filter: 'isFile'
+					},
+					{
+						expand: true,
+						cwd: 'js/vendor/',
+						src: ['**'],
+						dest: 'build/js/vendor/',
+						filter: 'isFile'
+					},
 				],
 			},
 		},
@@ -40,7 +58,7 @@ module.exports = function(grunt) {
 			},
 			build: {
 				files: {
-					'build/css/style.css': 'sass/style.scss',
+					'build/css/progeny-style.css': 'sass/progeny-style.scss',
 					'build/css/editor-style.css': 'sass/editor-style.scss',
 				}
 			}
@@ -54,21 +72,14 @@ module.exports = function(grunt) {
 			},
 			build: {
 				files: {
-					src: ['js/**/*.js']
+					src: ['js/**/*.js', '!js/vendor/**/*.js']
 				}
 			}
 		},
 
 		concat: {
 			build: {
-				src: [
-					'js/libs/packery.pkgd.js',
-					'js/libs/isotope.pkgd.js',
-					'js/libs/imagesloaded.pkgd.js',
-					'js/libs/jquery.sticky-kit.js',
-					'js/libs/jquery.flexslider.js',
-					'js/biotext.js'
-				],
+				src: ['js/*.js'],
 				dest: 'build/js/scripts.js',
 				nonull: true
 			}
@@ -91,7 +102,7 @@ module.exports = function(grunt) {
 			map: true, // inline sourcemaps
 
 			processors: [
-					require('autoprefixer-core')({browsers: 'last 2 versions'}), // add vendor prefixes
+					require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
 				]
 			},
 			dist: {

@@ -20,7 +20,7 @@ function progeny_settings_sanitizer() {
 		'one_zero',
 		GENESIS_SETTINGS_FIELD,
 		array(
-			'sm_production_on',
+			'progeny_production_on',
 		)
 	);
 
@@ -28,7 +28,7 @@ function progeny_settings_sanitizer() {
 	'absint',
 	GENESIS_SETTINGS_FIELD,
 	array(
-		'sm_assets_version',
+		'progeny_assets_version',
 	)
 );
 
@@ -61,12 +61,12 @@ function progeny_environment_settings_box() {
 	<p>
 		<label>
 			<input type="checkbox" name="<?php echo GENESIS_SETTINGS_FIELD; ?>[progeny_production_on]" value="1" <?php checked( genesis_get_option('progeny_production_on'), 1 ); ?> >
-		<?php _e( 'Use Production Assets?', 'sm' ); ?></label>
+		<?php _e( 'Use Production Assets?', 'progeny' ); ?></label>
 	</p>
 
 	<p>
 		<label>
-			<?php _e( 'Assets Version Number:', 'sm' ); ?><br>
+			<?php _e( 'Assets Version Number:', 'progeny' ); ?><br>
 			<input type="text" name="<?php echo GENESIS_SETTINGS_FIELD; ?>[progeny_assets_version]" value="<?php echo esc_attr( genesis_get_option('progeny_assets_version') ); ?>" class="regular-text" id="<?php echo GENESIS_SETTINGS_FIELD; ?>[progeny_assets_version]">
 		</label>
 	</p>
