@@ -33,6 +33,9 @@
     "grunt-csso": "^1.0.0",
     "grunt-newer": "^1.1.0",
     "grunt-notify": "^0.4.1",
-    "grunt-postcss": "^0.5.5"
+    "grunt-postcss": "^0.8.0"
+  },
+  "dependencies": {
+    "normalize.css": "^4.1.1"
   }
 }

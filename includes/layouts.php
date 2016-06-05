@@ -19,3 +19,13 @@
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+//* Add support for structural wraps
+add_theme_support( 'genesis-structural-wraps', array(
+	'header',
+	'nav',
+	'subnav',
+	'content',
+	'footer-widgets',
+	'footer',
+) );
