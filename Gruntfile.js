@@ -116,7 +116,7 @@ module.exports = function(grunt) {
 			},
 			build: {
 				files: {
-					'build/css/style.min.css': ['build/css/style.css'],
+					'build/css/progeny-style.min.css': ['build/css/progeny-style.css'],
 					'build/css/editor-style.min.css': ['build/css/editor-style.css']
 				}
 			}
@@ -187,6 +187,6 @@ module.exports = function(grunt) {
 
 	// grunt.registerTask('default', ['sass', 'postcss', 'imagemin', 'watch']);
 	grunt.registerTask('default', ['clean', 'copy', 'sass', 'postcss', 'concat', 'imagemin', 'watch']);
-	grunt.registerTask('build', ['clean', 'csscomb', 'sass', 'postcss', 'jshint', 'concat', 'uglify', 'imagemin', 'csso']);
+	grunt.registerTask('build', ['clean', 'copy', 'csscomb', 'sass', 'postcss', 'jshint', 'concat', 'uglify', 'imagemin', 'csso']);
 
 };

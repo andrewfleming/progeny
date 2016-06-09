@@ -1,7 +1,21 @@
 $susy: (
-	container: 1200px,
-	columns: 12,
 	debug: (
 		image: show-columns,
 	)
+);
+
+// Media query brakpoints
+$breakpoint-medium: 31.25em;//780px
+$breakpoint-large: 57.1875em;//915px
+$layout-small: (
+	container: 95%,
+	columns: 4,
+);
+$layout-medium: (
+	container: 500px,
+	columns: 8,
+);
+$layout-large: (
+	container: 1280px,
+	columns: 12,
 );

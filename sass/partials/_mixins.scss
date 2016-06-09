@@ -1,0 +1,26 @@
+@mixin link-border {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	&:hover,
+	&:active,
+	&:focus {
+		border-bottom: none;
+	}
+}
+@mixin link-hover-border {
+	border-bottom: none;
+	&:hover,
+	&:active,
+	&:focus {
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+	}
+}
+@mixin link-no-border {
+	border-bottom: none;
+	&:hover,
+	&:active,
+	&:focus {
+		border-bottom: none;
+	}
+}
