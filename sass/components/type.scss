@@ -1,0 +1,23 @@
+@include establish-baseline;
+body{@include debug-vertical-alignment;}
+
+h1{
+	// @include adjust-font-size-to( 36px, 3/2, 18px );
+}
+h2{
+	// @include adjust-font-size-to( 36px, 3/2, 18px );
+}
+h3{
+	// @include adjust-font-size-to( 36px, 3/2, 18px );
+}
+h4{
+	// @include adjust-font-size-to( 36px, 3/2, 18px );
+}
+h5{
+	// @include adjust-font-size-to( 36px, 3/2, 18px );
+}
+h6{
+	// @include adjust-font-size-to( 36px, 3/2, 18px );
+}
+
+p{}

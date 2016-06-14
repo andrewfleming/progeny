@@ -30,6 +30,15 @@
 	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
 }
 
+.genesis-skip-link {
+	margin: 0;
+	li {
+		height: 0;
+		width: 0;
+		list-style: none;
+	}
+}
+
 .more-link {
     position: relative;
 }

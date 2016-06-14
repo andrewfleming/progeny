@@ -30,8 +30,9 @@ function progeny_enqueue_scripts() {
 	$stylesheet_dir = get_stylesheet_directory_uri();
 
 	// Styles
+	wp_register_style( 'normalize', get_stylesheet_directory_uri().'/build/css/vendor/normalize.css', array(), '4.1.1', 'screen' );
 	$src = $use_production_assets ? '/build/css/progeny-style.min.css' : '/build/css/progeny-style.css';
-	wp_enqueue_style( 'progeny-style', get_stylesheet_directory_uri() . $src, array( 'dashicons' ), $assets_version );
+	wp_enqueue_style( 'progeny-style', get_stylesheet_directory_uri() . $src, array( 'normalize' ), $assets_version );
 
 	// Fonts
 	// wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic', array(), CHILD_THEME_VERSION );
