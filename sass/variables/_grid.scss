@@ -6,13 +6,15 @@ $susy: (
 
 // Media query brakpoints
 $breakpoint-medium: 31.25em;//780px
-$breakpoint-large: 57.1875em;//915px
+$breakpoint-large: 80em;//1280px
+
+// Susy grid layouts
 $layout-small: (
 	container: 95%,
 	columns: 4,
 );
 $layout-medium: (
-	container: 500px,
+	container: 95%,
 	columns: 8,
 );
 $layout-large: (

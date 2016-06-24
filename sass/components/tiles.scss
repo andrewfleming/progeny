@@ -1,0 +1,12 @@
+.tiles .entry{
+	@include gallery(2 of 4);
+	@include susy-breakpoint($breakpoint-medium, $layout-medium) {
+		@include gallery(4 of 8);
+	}
+	@include susy-breakpoint($breakpoint-large, $layout-large) {
+		@include gallery(3 of 12);
+	}
+}
+.tiles--cta .entry{
+	@include span(full);
+}

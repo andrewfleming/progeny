@@ -1,1 +1,6 @@
-.button{}
+.button,
+.woocommerce a.button{
+	@include rhythm-padding(0.5, 0.5);
+}
+.button--primary{}
+.button--is-disabled{}

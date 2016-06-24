@@ -1,9 +1,31 @@
-.site-container{}
-.wrap{}
-.site-header{}
+.site-container{
+	background-color: transparentize($bg, 0.2);
+}
+.wrap{
+	@include container($layout-small);
+	@include susy-breakpoint($breakpoint-medium) {
+		@include container($layout-medium);
+	}
+	@include susy-breakpoint($breakpoint-large) {
+		@include container($layout-large);
+	}
+}
+.site-header{
+	@include margin-trailer();
+}
 .site-inner{}
-.content-sidebar-wrap{}
-.content{}
+.content-sidebar-wrap{
+	@include container($layout-small);
+	@include susy-breakpoint($breakpoint-medium) {
+		@include container($layout-medium);
+	}
+	@include susy-breakpoint($breakpoint-large) {
+		@include container($layout-large);
+	}
+}
+.content{
+	@include clearfix;
+}
 .sidebar-primary{}
 .sidebar-secondary{}
 .footer-widgets{}

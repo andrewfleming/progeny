@@ -1,0 +1,7 @@
+img, video, object, embed{
+	height: auto;
+	max-width: 100%;
+}
+.woocommerce div.product div.images, .woocommerce div.product div.summary{
+	@include margin-trailer(2);
+}
