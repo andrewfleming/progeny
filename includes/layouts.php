@@ -25,7 +25,6 @@ add_theme_support( 'genesis-structural-wraps', array(
 	'header',
 	'nav',
 	'subnav',
-	'content',
 	'footer-widgets',
 	'footer',
 ) );

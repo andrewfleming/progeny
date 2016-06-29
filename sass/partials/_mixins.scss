@@ -1,3 +1,11 @@
+@mixin link{
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	text-decoration: none;
+	&:hover, &:active, &:focus{
+		border-bottom-style: solid;
+	}
+}
 @mixin link-border {
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
@@ -22,5 +30,12 @@
 	&:active,
 	&:focus {
 		border-bottom: none;
+	}
+}
+@mixin clearfix{
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
 	}
 }

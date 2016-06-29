@@ -1,23 +1,45 @@
 @include establish-baseline;
 body{@include debug-vertical-alignment;}
 
+body{
+	color: $body-text;
+	font-family: $pt-sans;
+}
+h1, h2, h3, h4, h5, h6{
+	color: $headings;
+	font-family: $pt-sans-narrow;
+}
 h1{
-	// @include adjust-font-size-to( 36px, 3/2, 18px );
+	@include adjust-font-size-to( $fs-h1, 3/2 );
+	@include margin-trailer(1, $fs-h1);
 }
 h2{
-	// @include adjust-font-size-to( 36px, 3/2, 18px );
+	@include adjust-font-size-to( $fs-h2, 3/2 );
+	@include margin-trailer(1, $fs-h2);
 }
 h3{
-	// @include adjust-font-size-to( 36px, 3/2, 18px );
+	@include adjust-font-size-to( $fs-h3, 3/2 );
+	@include margin-trailer(1, $fs-h3);
 }
 h4{
-	// @include adjust-font-size-to( 36px, 3/2, 18px );
+	@include adjust-font-size-to( $fs-h4, 3/2 );
+	@include margin-trailer(1, $fs-h4);
 }
 h5{
-	// @include adjust-font-size-to( 36px, 3/2, 18px );
+	@include adjust-font-size-to( $fs-h5, 3/2 );
+	@include margin-trailer(1, $fs-h5);
 }
 h6{
-	// @include adjust-font-size-to( 36px, 3/2, 18px );
+	@include adjust-font-size-to( $fs-h6, 3/2 );
+	@include margin-trailer(1, $fs-h6);
+}
+p{
+	margin-top: 0;
+	@include margin-trailer(1);
 }
 
-p{}
+.site-header{
+	p{
+		margin: 0;
+	}
+}

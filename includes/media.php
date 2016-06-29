@@ -11,5 +11,6 @@ function progeny_allow_svg_in_media_gallery($mimes) {
 }
 add_filter('upload_mimes', 'progeny_allow_svg_in_media_gallery');
 
+
 //* Add Image Sizes
 // add_image_size( 'featured-image', 720, 400, TRUE );

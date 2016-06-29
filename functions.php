@@ -26,9 +26,12 @@ load_child_theme_textdomain( 'progeny', apply_filters( 'child_theme_textdomain',
  */
 $includes = array(
 	'author-box',
+	'books',
 	'comments',
+	'contributors',
 	'entry-content',
 	'entry-image',
+	'entry-title',
 	'footer-credits',
 	'head',
 	'layouts',
@@ -36,9 +39,13 @@ $includes = array(
 	'media',
 	'menus',
 	'microdata',
+	'podcasts',
+	'producers',
+	'recipes',
 	'site-title',
 	'theme-options',
 	'widgets',
+	'woocommerce',
 );
 
 foreach ( $includes as $i ) {

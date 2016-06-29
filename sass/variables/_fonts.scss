@@ -1,6 +1,13 @@
-// $base-font-size:;
+$base-font-size: 16px;
 // $base-leading:;
 
 // Font stacks
-
+$pt-sans: 'PT Sans', sans-serif;
+$pt-sans-narrow: 'PT Sans Narrow', sans-serif;
 // Font sizes
+$fs-h1: $base-font-size * 2;
+$fs-h2: $base-font-size * 1.8;
+$fs-h3: $base-font-size * 1.6;
+$fs-h4: $base-font-size * 1.4;
+$fs-h5: $base-font-size * 1.2;
+$fs-h6: $base-font-size * 1;
