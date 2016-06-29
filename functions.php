@@ -44,3 +44,7 @@ $includes = array(
 foreach ( $includes as $i ) {
 	require_once( CHILD_THEME_INCLUDES_DIR . $i . '.php' );
 }
+
+if ( is_admin() ) {
+	require_once( CHILD_THEME_INCLUDES_DIR . 'editor.php' );
+}
