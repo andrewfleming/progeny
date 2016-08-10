@@ -23,8 +23,7 @@ add_theme_support( 'genesis-responsive-viewport' );
  * @return void
  */
 function progeny_enqueue_scripts() {
-	$use_production_assets = genesis_get_option('progeny_production_on');
-	$use_production_assets = !empty($use_production_assets);
+	$use_production_assets = WP_DEBUG ? 0 : 1;
 	$assets_version = genesis_get_option('progeny_assets_version');
 	$assets_version = !empty($assets_version) ? absint($assets_version) : null;
 	$stylesheet_dir = get_stylesheet_directory_uri();

@@ -3,10 +3,11 @@
  */
 
 ( function ( document, $, undefined ) {
+	"use strict";
+	/* jshint validthis: true */
 
 	$( 'body' ).addClass( 'js' );
 
-	'use strict';
 
 	var genesisSample              = {},
 		mainMenuButtonClass = 'menu-toggle',
@@ -25,7 +26,8 @@
 				'class' : subMenuButtonClass,
 				'aria-expanded' : false,
 				'aria-pressed' : false,
-				'role' : 'button'
+				'role' : 'button',
+				'style' : 'none'
 				} )
 				.append( $( '<span />', {
 					'class' : 'screen-reader-text',
@@ -34,23 +36,27 @@
 		};
 		if ($( '.nav-primary' ).length > 0 ) {
 			$( '.nav-primary' ).before( toggleButtons.menu ); // add the main nav buttons
+			$('.nav-primary').hide();
 		} else {
 			$( '.nav-header' ).before( toggleButtons.menu );
 		}
 		$( 'nav .sub-menu' ).before( toggleButtons.submenu ); // add the submenu nav buttons
 		$( '.' + mainMenuButtonClass ).each( _addClassID );
-		$( '.' + mainMenuButtonClass ).addClass('dashicons-before dashicons-menu');
-		$( '.' + subMenuButtonClass ).addClass('dashicons-before dashicons-arrow-down');
+		$( '.' + mainMenuButtonClass ).addClass('icon ion-navicon');
+		// $( '.' + mainMenuButtonClass ).addClass('dashicons-before dashicons-menu');
+		$( '.' + subMenuButtonClass ).addClass('ion-ios-arrow-down');
+		// $( '.' + subMenuButtonClass ).addClass('dashicons-before dashicons-arrow-down');
 		$( window ).on( 'resize.genesisSample', _doResize ).triggerHandler( 'resize.genesisSample' );
 		$( '.' + mainMenuButtonClass ).on( 'click.genesisSample-mainbutton', _mainmenuToggle );
 		$( '.' + subMenuButtonClass ).on( 'click.genesisSample-subbutton', _submenuToggle );
+		$( 'nav .sub-menu' ).hide(); // add the submenu nav buttons
 	};
 
 	// add nav class and ID to related button
 	function _addClassID() {
-		var $this = $( this ),
-			nav   = $this.next( 'nav' ),
-			id    = 'class';
+		var $this = $(this),
+			nav = $this.next( 'nav' ),
+			id = 'class';
 		if ( $( nav ).attr( 'id' ) ) {
 			id = 'id';
 		}
@@ -153,7 +159,7 @@
 			.attr( 'aria-expanded', false )
 			.attr( 'aria-pressed', false );
 		$( 'nav, .sub-menu' )
-			.attr( 'style', '' );
+			.attr( 'style', null );
 	}
 
 	/**

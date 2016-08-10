@@ -186,7 +186,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-notify');
 
 	// grunt.registerTask('default', ['sass', 'postcss', 'imagemin', 'watch']);
-	grunt.registerTask('default', ['clean', 'copy', 'sass', 'postcss', 'concat', 'imagemin', 'watch']);
+	grunt.registerTask('default', ['clean', 'copy', 'sass', 'postcss', 'concat', 'imagemin', 'uglify', 'csso', 'watch']);
 	grunt.registerTask('build', ['clean', 'copy', 'csscomb', 'sass', 'postcss', 'jshint', 'concat', 'uglify', 'imagemin', 'csso']);
 
 };

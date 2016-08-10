@@ -1,0 +1,12 @@
+.entry-header{}
+.entry-title{}
+.entry-info{}
+.entry-meta{}
+.entry-content{}
+.entry-image{}
+.entry-excerpt{}
+.entry-footer{}
+
+@include susy-breakpoint($breakpoint-medium, $layout-medium) {
+
+}

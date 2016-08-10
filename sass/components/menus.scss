@@ -25,7 +25,6 @@
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus  {
-	color: #c3251d;
 	text-decoration: underline;
 }
 
@@ -93,8 +92,10 @@
 	opacity: 1;
 }
 
-.sub-menu-toggle,
-.menu-toggle {
-	display: none;
-	visibility: hidden;
+@include susy-breakpoint($breakpoint-medium, $layout-medium) {
+	.sub-menu-toggle,
+	.menu-toggle {
+		display: none;
+		visibility: hidden;
+	}
 }

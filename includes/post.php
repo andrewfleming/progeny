@@ -61,3 +61,15 @@ function prevision_related_entry_title_links() {
 	echo apply_filters( 'genesis_post_title_output', "$output \n" );
 
 }
+
+/**
+ * Display feature image
+ * @return void
+ */
+function prevision_feature_image( $args ) {
+	$defaults = array();
+	$args = wp_parse_args( $args, $defaults );
+	echo '<div class="entry-image">';
+	genesis_image( $args );
+	echo '</div>';
+}
