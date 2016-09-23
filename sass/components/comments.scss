@@ -1,0 +1,69 @@
+.entry-comments {
+	@include margin-trailer(1);
+	@include susy-clearfix;
+}
+.comment-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.comment article {
+	position: relative;
+	@include margin-leader(0.5);
+	@include full;
+	@include push(60px);
+}
+.comment-author {
+	color: lighten($body-text, 15%);
+	font-style: italic;
+	margin-bottom: 0;
+	text-align: left;
+	@include adjust-font-size-to( 14px );
+
+	.avatar {
+		border-radius: 50%;
+		position: absolute;
+		left: -60px;
+	}
+
+	.name {}
+
+	.says {
+		font-style: italic;
+	}
+}
+.comment-meta {
+	margin-top: 0;
+	@include adjust-font-size-to( 12px );
+}
+.comment-content {
+	@include break;
+}
+.comment-reply {
+	@include adjust-font-size-to( 12px );
+}
+.comment-edit-link {
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	@include adjust-font-size-to( 12px );
+}
+.children {
+	padding: 0 0 0 rhythm();
+
+	.comment {
+		list-style-type: none;
+
+		article {
+			width: auto;
+		}
+	}
+}
+
+
+@include susy-breakpoint($breakpoint-medium, $layout-medium) {
+	.entry-comments,
+	.comments-respond {
+		@include squish(2);
+	}
+}

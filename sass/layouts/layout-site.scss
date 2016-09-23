@@ -1,14 +1,10 @@
 .site-container{
-	background-color: transparentize($bg, 0.2);
+	* + * {
+		@include margin-leader(1);
+	}
 }
 .wrap{
 	@include container($layout-small);
-	@include susy-breakpoint($breakpoint-medium) {
-		@include container($layout-medium);
-	}
-	@include susy-breakpoint($breakpoint-large) {
-		@include container($layout-large);
-	}
 }
 .site-header{
 	@include margin-trailer();
@@ -16,12 +12,6 @@
 .site-inner{}
 .content-sidebar-wrap{
 	@include container($layout-small);
-	@include susy-breakpoint($breakpoint-medium) {
-		@include container($layout-medium);
-	}
-	@include susy-breakpoint($breakpoint-large) {
-		@include container($layout-large);
-	}
 }
 .content{
 	@include clearfix;
@@ -38,3 +28,24 @@
 .sidebar-content{}
 .sidebar-content-sidebar{}
 .sidebar-sidebar-content{}
+
+@include susy-breakpoint($breakpoint-medium, $layout-medium) {
+	.site-container{}
+	.wrap{}
+	.site-header{}
+	.site-inner{}
+	.content-sidebar-wrap{}
+	.content{}
+	.sidebar-primary{}
+	.sidebar-secondary{}
+	.footer-widgets{}
+	.site-footer{}
+
+	// Layout options
+	.full-width-content{}
+	.content-sidebar{}
+	.content-sidebar-sidebar{}
+	.sidebar-content{}
+	.sidebar-content-sidebar{}
+	.sidebar-sidebar-content{}
+}

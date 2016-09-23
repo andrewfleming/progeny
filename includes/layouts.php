@@ -1,5 +1,8 @@
 <?php
 
+// Force full-width content
+// add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
+
 //* Force content-sidebar layout
 // add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 

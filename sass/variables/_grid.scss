@@ -1,23 +1,25 @@
 $susy: (
+	container: 96.61%,
 	debug: (
 		image: show-columns,
 	)
 );
 
+// Max-widths that work well with 12 column grid and 24px baseline grid
+// 1296
+// 1152
+
 // Media query brakpoints
 $breakpoint-medium: 31.25em;//780px
-$breakpoint-large: 80em;//1280px
+$breakpoint-large: 81em;//1296px
 
 // Susy grid layouts
 $layout-small: (
-	container: 95%,
 	columns: 4,
 );
 $layout-medium: (
-	container: 95%,
-	columns: 8,
+	columns: 12,
 );
 $layout-large: (
-	container: 1280px,
-	columns: 12,
+	container: 1296px,
 );

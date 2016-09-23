@@ -8,36 +8,39 @@ body{
 h1, h2, h3, h4, h5, h6{
 	color: $headings;
 	font-family: $pt-sans-narrow;
+	margin: 0;
 }
 h1{
 	@include adjust-font-size-to( $fs-h1, 3/2 );
-	@include margin-trailer(1, $fs-h1);
 }
 h2{
 	@include adjust-font-size-to( $fs-h2, 3/2 );
-	@include margin-trailer(1, $fs-h2);
 }
 h3{
 	@include adjust-font-size-to( $fs-h3, 3/2 );
-	@include margin-trailer(1, $fs-h3);
 }
 h4{
 	@include adjust-font-size-to( $fs-h4, 3/2 );
-	@include margin-trailer(1, $fs-h4);
 }
 h5{
 	@include adjust-font-size-to( $fs-h5, 3/2 );
-	@include margin-trailer(1, $fs-h5);
 }
 h6{
 	@include adjust-font-size-to( $fs-h6, 3/2 );
-	@include margin-trailer(1, $fs-h6);
 }
 p{
 	margin-top: 0;
 	@include margin-trailer(1);
 }
+// * {
+// 	h1, h2, h3, h4, h5, h6{
+// 		@include margin-leader(1);
+// 	}
 
+// 	p{
+// 		@include margin-leader(0.5);
+// 	}
+// }
 .site-header{
 	p{
 		margin: 0;
